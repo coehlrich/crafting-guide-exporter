@@ -4,6 +4,7 @@ import com.craftingguide.CraftingGuideConfig;
 import com.craftingguide.CraftingGuideException;
 import com.craftingguide.CraftingGuideFileManager;
 import com.craftingguide.exporter.commands.CraftingGuideDumpCommand;
+import com.craftingguide.exporter.extensions.advancedsolarpanels.AdvancedSolarPanelsExtension;
 import com.craftingguide.exporter.extensions.agricraft.AgriCraftExtension;
 import com.craftingguide.exporter.extensions.bigreactors.BigReactorsExtension;
 import com.craftingguide.exporter.extensions.buildcraft.BuildCraftExtension;
@@ -48,6 +49,8 @@ public class ExporterMod implements Registry {
                     this.executeWorkers(this.dumpers, ()-> {
                         long duration = System.currentTimeMillis() - start;
                         LOGGER.info("Finished CraftingGuide export after " + duration + "ms.");
+                        
+                        this.modPack = new ModPackModel();
 
                         commandStep.done();
                     });
@@ -77,6 +80,7 @@ public class ExporterMod implements Registry {
             this.register(new ForgeExtension());
             this.register(new MinecraftExtension());
             this.register(new SolarExpansionExtension());
+            this.register(new AdvancedSolarPanelsExtension());
         } catch (Exception e) {
             System.err.println("Failed to initialize Crafting Guide Export!");
             e.printStackTrace();
