@@ -6,6 +6,7 @@ import com.craftingguide.CraftingGuideFileManager;
 import com.craftingguide.exporter.commands.CraftingGuideDumpCommand;
 import com.craftingguide.exporter.extensions.advancedsolarpanels.AdvancedSolarPanelsExtension;
 import com.craftingguide.exporter.extensions.agricraft.AgriCraftExtension;
+import com.craftingguide.exporter.extensions.appliedenergistics2.AppliedEnergistics2Extension;
 import com.craftingguide.exporter.extensions.bigreactors.BigReactorsExtension;
 import com.craftingguide.exporter.extensions.buildcraft.BuildCraftExtension;
 import com.craftingguide.exporter.extensions.cofh.CofhExtension;
@@ -81,6 +82,7 @@ public class ExporterMod implements Registry {
             this.register(new MinecraftExtension());
             this.register(new SolarExpansionExtension());
             this.register(new AdvancedSolarPanelsExtension());
+            this.register(new AppliedEnergistics2Extension());
         } catch (Exception e) {
             System.err.println("Failed to initialize Crafting Guide Export!");
             e.printStackTrace();

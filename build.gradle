@@ -31,6 +31,7 @@ minecraft {
 }
 
 repositories {
+  maven { url = "http://files.minecraftforge.net/maven/"}
   maven { url = "http://maven.ic2.player.to"}
   maven { url = "http://chickenbones.net/maven/"}
   maven {
