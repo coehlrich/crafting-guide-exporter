@@ -52,6 +52,10 @@ dependencies {
   compile files("libs/ThermalDynamics-[1.7.10]1.2.1-172-dev.jar")
   compile files("libs/ThermalExpansion-[1.7.10]4.1.5-248-dev.jar")
   compile files("libs/ThermalFoundation-[1.7.10]1.2.6-118-dev.jar")
+  compile files("libs/AdvancedSolarPanel-1.7.10-3.5.1-deobf.jar")
+  compile "appeng:appliedenergistics2:rv3-beta-6:dev"
+  compile "draconic-evolution:Draconic-Evolution-1.7.10:1.0.2h:deobf"
+  compile "brandons-core:BrandonsCore:1.0.0.12:deobf"
   testCompile 'junit:junit:4.12'
 }
 
