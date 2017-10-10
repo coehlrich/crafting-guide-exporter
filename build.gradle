@@ -47,7 +47,7 @@ dependencies {
   compile "com.github.Buildcraft:buildcraft:68514dedb0:dev"
   compile "codechicken:CodeChickenCore:1.7.10-1.0.4.29:dev"
   compile files("libs/CoFHCore-[1.7.10]3.1.4-329-dev.jar")
-  compile "codechicken:EnderStorage:1.7.10-1.4.5.27:dev"
+  compile "codechicken:EnderStorage:1.7.10-1.4.7.38:dev"
   compile files("libs/RedstoneArsenal-[1.7.10]1.1.2-92-dev.jar")
   compile files("libs/ThermalDynamics-[1.7.10]1.2.1-172-dev.jar")
   compile files("libs/ThermalExpansion-[1.7.10]4.1.5-248-dev.jar")
@@ -56,6 +56,7 @@ dependencies {
   compile "appeng:appliedenergistics2:rv3-beta-6:dev"
   compile "draconic-evolution:Draconic-Evolution-1.7.10:1.0.2h:deobf"
   compile "brandons-core:BrandonsCore:1.0.0.12:deobf"
+  compile "net.industrial-craft:industrialcraft-2:2.2.827-experimental:dev"
   testCompile 'junit:junit:4.12'
 }
 
