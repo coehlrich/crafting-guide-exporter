@@ -78,6 +78,7 @@ dependencies {
   compile "brandons-core:BrandonsCore:1.0.0.12:deobf"
   compile "net.industrial-craft:industrialcraft-2:2.2.827-experimental:dev"
   compile "big-reactors:BigReactors:0.4.3A"
+  compile "com.enderio:EnderIO:1.7.10-2.3.0.429_beta:dev"
   compile name: 'CoFHCore', version: '[1.7.10]3.0.3B4-302-dev', ext: 'jar'
   compile name: 'RedstoneArsenal', version: '[1.7.10]1.1.2-92-dev', ext: 'jar'
   compile name: 'ThermalDynamics', version: '[1.7.10]1.2.1-172-dev', ext: 'jar'
