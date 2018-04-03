@@ -17,6 +17,7 @@ import com.craftingguide.exporter.extensions.enderio.EnderIOExtension;
 import com.craftingguide.exporter.extensions.forestry.ForestryExtension;
 import com.craftingguide.exporter.extensions.forge.ForgeExtension;
 import com.craftingguide.exporter.extensions.minecraft.MinecraftExtension;
+import com.craftingguide.exporter.extensions.notenoughitems.NotEnoughItemsExtension;
 import com.craftingguide.exporter.extensions.solarexpansion.SolarExpansionExtension;
 import com.craftingguide.exporter.models.ModPackModel;
 import cpw.mods.fml.common.Mod;
@@ -47,10 +48,13 @@ public class ExporterMod implements Registry {
         try {
             LOGGER.info("Starting CraftingGuide export...");
             long start = System.currentTimeMillis();
+            
+            this.modPack = new ModPackModel();
 
             this.executeWorkers(this.gatherers, ()-> {
                 this.executeWorkers(this.editors, ()-> {
                     this.executeWorkers(this.dumpers, ()-> {
+                        
                         long duration = System.currentTimeMillis() - start;
                         LOGGER.info("Finished CraftingGuide export after " + duration + "ms.");
                         
@@ -89,6 +93,7 @@ public class ExporterMod implements Registry {
             this.register(new DraconicEvolutionExtension());
             this.register(new EnderIOExtension());
             this.register(new ForestryExtension());
+            this.register(new NotEnoughItemsExtension());
         } catch (Exception e) {
             System.err.println("Failed to initialize Crafting Guide Export!");
             e.printStackTrace();
